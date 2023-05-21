@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sprint</title>
+    <link rel="stylesheet" href="./css/other/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css"/>
+
+  </head>
+  <body>
+    <main class="wrapper">
+      <!-- bloque tarjeta -->
+      <article class="card">
+        <section class="card-front">
+          <img class="card-front__bg" src="./img/bg-card-front.png" alt="card front">
+          <div class="card-front__data_top">
+            <img class="card-front__logo" src="./img/card-logo.svg" alt="logo">   
+            <div class="card-front__data_display">
+              <h5 class="card-front__number_display card-title" id="displayNumber">3000 5278 9631 0100</h5>
+                <div class="card-front__data_bottom">
+                  <p class="card-front__name_display card-text" id="displayName">Gonzalo Sanchez</p>
+                  <p class="card-front__exp_date card-text"><span class="card-front__month_display" id="displayMonth">07</span>/<span class="card-front__year_display" id="displayYear">23</span></p>
+                </div>
+            </div>
+          </div>
+        </section>
+        <section class="card-back">
+          <img class="card-back__bg" src="./img/bg-card-back.png" alt="card back">
+          <div class="card-back__data">
+            <p class="card-back__cvc card-text" id="displayCvc">757</p>
+          </div>
+        </section>
+      </article>  
+      <!-- formulario -->
+      <article class="form-wrapper">
+        <form class="form" id="form">
+          <!-- mini bloque -->
+          <div class="form-group">
+              <label for="nameInput" class="form__label">Cardholder Name</label>
+              <input type="text" id="nameInput" class="form__input" placeholder="e.g. Gonzalo Sanchez" name="Gonzalo Sanchez" required>
+              <span></span> <!-- Se usaran en el js -->
+          </div>
+          <div class="form-group">
+              <label for="numberInput" class="form__label">Card Number</label>
+              <input type="text" id="numberInput" class="form__input" placeholder="e.g. 3000 5278 9631 0100" name="3000 5278 9631 0100" maxlength="16" required>
+              <span></span>
+          </div>
+          <div class="form-group-col">
+              <div class="form-group-row">
+                  <label for="monthInput" class="form__label">Exp. Date (MM/YY)</label>
+                  <!-- el for va con el ID del primer input ("monthInput") para que se "enfoque" en él.-->
+                  <div class="form-group__2col">
+                    <div>
+                      <input type="text" id="monthInput" class="form-group__exp_date form__input" placeholder="07" name="07" maxlength="2" required>
+                      <span></span>
+                    </div>
+                    <div>
+                      <input type="text" id="yearInput" class="form-group__exp_date form__input" placeholder="23" name="23" maxlength="2" required>
+                      <span></span>
+                    </div>
+                  </div>  
+              </div>    
+              <div class="flex-group-row">
+                  <label for="cvcInput" class="form__label">CVC</label>
+                  <input type="text" id="cvcInput" class="form-group__cvc form__input .form__input-cvc" placeholder="e.g. 757" name="757" maxlength="3" required>
+                  <span></span>
+              </div>
+          </div>
+          <!-- bloque btn -->
+          <div class="form-group">
+              <button type="submit" class="button">Confirm</button>
+          </div>
+        </form>
+          <div class="thankYou hiden" id="thankYou">
+            <img class="thankYou-img" src="./img/icon-complete.svg" alt="completado">
+            <h1 class="thankYou-title">Thank you!</h1>
+            <p class="thankYou-text">We've added your card details</p>
+            <!-- bloque btn -->
+            <button class="button thankYou__button" id="thankYou-btn">Continue</button>
+          </div>  
+      </article>
+    </main>
+    <script type="module" src="./css/modules/module.js"></script>
+  </body>
+</html>
