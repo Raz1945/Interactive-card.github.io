@@ -1,4 +1,4 @@
-# interactive-card.github.io
+# Interactive-card.github.io
 This is another Frontend Mentor challenge. 
 This project will be an excellent way to practice DOM manipulation and form validation while also putting your HTML and CSS skills to the test.
 
